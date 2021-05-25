@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/moviex/static/css/main.f2dcb569.chunk.css",
-    "main.js": "/moviex/static/js/main.18cc90e7.chunk.js",
-    "main.js.map": "/moviex/static/js/main.18cc90e7.chunk.js.map",
-    "runtime-main.js": "/moviex/static/js/runtime-main.38f95df0.js",
-    "runtime-main.js.map": "/moviex/static/js/runtime-main.38f95df0.js.map",
-    "static/js/2.5925b56e.chunk.js": "/moviex/static/js/2.5925b56e.chunk.js",
-    "static/js/2.5925b56e.chunk.js.map": "/moviex/static/js/2.5925b56e.chunk.js.map",
-    "static/js/3.0fc05e73.chunk.js": "/moviex/static/js/3.0fc05e73.chunk.js",
-    "static/js/3.0fc05e73.chunk.js.map": "/moviex/static/js/3.0fc05e73.chunk.js.map",
-    "index.html": "/moviex/index.html",
-    "static/css/main.f2dcb569.chunk.css.map": "/moviex/static/css/main.f2dcb569.chunk.css.map",
-    "static/js/2.5925b56e.chunk.js.LICENSE.txt": "/moviex/static/js/2.5925b56e.chunk.js.LICENSE.txt",
-    "static/media/index.scss": "/moviex/static/media/Movie-Filmstrip.2cd40079.ttf",
-    "static/media/Spinner.7f937069.svg": "/moviex/static/media/Spinner.7f937069.svg",
-    "static/media/noPhoto.0b19f0b7.png": "/moviex/static/media/noPhoto.0b19f0b7.png",
-    "static/media/undraw_home_cinema.27e65f6a.svg": "/moviex/static/media/undraw_home_cinema.27e65f6a.svg",
-    "static/media/HomePage.scss": "/moviex/static/media/wave.4c789db0.svg"
+    "main.css": "/static/css/main.60b335b9.chunk.css",
+    "main.js": "/static/js/main.18cc90e7.chunk.js",
+    "main.js.map": "/static/js/main.18cc90e7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.4c74e575.js",
+    "runtime-main.js.map": "/static/js/runtime-main.4c74e575.js.map",
+    "static/js/2.5925b56e.chunk.js": "/static/js/2.5925b56e.chunk.js",
+    "static/js/2.5925b56e.chunk.js.map": "/static/js/2.5925b56e.chunk.js.map",
+    "static/js/3.0fc05e73.chunk.js": "/static/js/3.0fc05e73.chunk.js",
+    "static/js/3.0fc05e73.chunk.js.map": "/static/js/3.0fc05e73.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.60b335b9.chunk.css.map": "/static/css/main.60b335b9.chunk.css.map",
+    "static/js/2.5925b56e.chunk.js.LICENSE.txt": "/static/js/2.5925b56e.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/static/media/Movie-Filmstrip.2cd40079.ttf",
+    "static/media/Spinner.7f937069.svg": "/static/media/Spinner.7f937069.svg",
+    "static/media/noPhoto.0b19f0b7.png": "/static/media/noPhoto.0b19f0b7.png",
+    "static/media/undraw_home_cinema.27e65f6a.svg": "/static/media/undraw_home_cinema.27e65f6a.svg",
+    "static/media/HomePage.scss": "/static/media/wave.4c789db0.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.38f95df0.js",
+    "static/js/runtime-main.4c74e575.js",
     "static/js/2.5925b56e.chunk.js",
-    "static/css/main.f2dcb569.chunk.css",
+    "static/css/main.60b335b9.chunk.css",
     "static/js/main.18cc90e7.chunk.js"
   ]
 }
