@@ -12,6 +12,9 @@ const session = expressSession({
     saveUninitialized: true,
     cookie: { secure: false }
 })
+// app.use(express.json({'limit': '70mb'}))
+// app.use(session)
+// console.log('wad');
 // Express App Config
 app.use(express.json())
 app.use(session)

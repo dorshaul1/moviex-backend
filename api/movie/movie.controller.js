@@ -1,8 +1,6 @@
-// const socketService = require('../../services/socket.service')
 const movieService = require('./movie.service')
 const logger = require('../../services/logger.service')
 const socketService = require('../../services/socket.service')
-// const userService = require('../user/user.service')
 
 async function getMovies(req, res) {
       try {
@@ -91,17 +89,27 @@ async function getMostUpcomingMovies(req, res) {
             res.status(500).send({ err: 'Failed to get movie' })
       }
 }
-// async function getSimilarMovies(req, res) {
+async function searchMovie(req, res) {
+      try {
+            const { searchedMovie } = req.params
+            movies = await movieService.tmdb_searchMovie(searchedMovie)
+            res.json(movies.results)
+      } catch (err) {
+            logger.error('Cannot get movies', err)
+            res.status(500).send({ err: 'Failed to get movie' })
+      }
+}
+
+// async function getImages(req, res) {
 //       try {
 //             const { id } = req.params
-//             movies = await movieService.tmdb_getSimilarMovies(id)
-//             res.json(movies.results)
+//             images = await movieService.tmdb_getImages(id)
+//             res.json(images)
 //       } catch (err) {
-//             logger.error('Cannot get movies', err)
-//             res.status(500).send({ err: 'Failed to get movie' })
+//             logger.error('Cannot get images', err)
+//             res.status(500).send({ err: 'Failed to get images' })
 //       }
 // }
-
 module.exports = {
       getMovies,
       getMovieById,
@@ -111,5 +119,7 @@ module.exports = {
       getCurrMovieBId,
       getMostPopularMovies,
       getMostUpcomingMovies,
+      searchMovie,
+      // getImages
       // getSimilarMovies
 }
