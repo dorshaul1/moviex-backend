@@ -63,8 +63,6 @@ async function remove(movieId) {
 function _getMovieImages(movie) {
       const movieImg = `https://image.tmdb.org/t/p/original/${movie.poster_path}`
       const backDropImg = `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`
-      // delete movie.poster_path
-      // delete movie.backdrop_path
       return { movieImg, backDropImg }
 }
 
@@ -94,18 +92,11 @@ async function tmdb_getMovieBId(id) {
 
 async function tmdb_getMostPopularMovies(page = 1) {
       try {
-            console.log('test');
-
             const popularMovies = await axios(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${page}`)
-            // popularMovies.data.results.map( (movie) => {
-            //       d}
-            popularMovies.data.results.map( (movie) => {
-                  // const movieBackdrop = tmdb_getImages(movie.id)
-                  // console.log('movieBackdrop:', movieBackdrop)
+            popularMovies.data.results.map((movie) => {
                   const { movieImg, backDropImg } = _getMovieImages(movie)
                   movie.image = movieImg
                   movie.backDrop = backDropImg
-                  // movie.backDrop = movieBackdrop
             })
             return popularMovies.data
       } catch (err) {
@@ -161,8 +152,8 @@ async function tmdb_searchMovie(searchedMovie, page = 1) {
       try {
             const movies = await axios(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&page=${page}&include_adult=false&query=${searchedMovie}`)
             movies.data.results.map((movie) => {
-            const { movieImg } = _getMovieImages(movie)
-            movie.image = movieImg
+                  const { movieImg } = _getMovieImages(movie)
+                  movie.image = movieImg
             })
             return movies.data
       } catch (err) {
@@ -171,15 +162,15 @@ async function tmdb_searchMovie(searchedMovie, page = 1) {
       }
 }
 
-// async function tmdb_getImages(movieId) {
-//       try {
-//             const images = await axios(`https://api.themoviedb.org/3/movie/${movieId}/images?api_key=${API_KEY}`)
-//             // console.log('images:', images.data)
-//             return images.data
-//       } catch (err) {
-//             throw err
-//       }
-// }
+async function tmdb_getActorDetail(actorId) {
+      try {
+            const actor = await axios(`https://api.themoviedb.org/3/person/${actorId}?api_key=${API_KEY}&language=en-US`)
+            actor.data.image = `https://image.tmdb.org/t/p/original/${actor.data.profile_path}`
+            return actor.data
+      } catch (err) {
+            throw err
+      }
+}
 
 
 
@@ -193,7 +184,7 @@ module.exports = {
       tmdb_getMostPopularMovies,
       tmdb_getMostUpcomingMovies,
       tmdb_searchMovie,
-      // tmdb_getImages
+      tmdb_getActorDetail
 }
 
 

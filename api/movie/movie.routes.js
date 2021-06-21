@@ -1,5 +1,4 @@
 const express = require('express')
-// const {requireAuth, requireAdmin} = require('../../middlewares/requireAuth.middleware')
 const { log } = require('../../middlewares/logger.middleware')
 const {
     getMovies,
@@ -11,12 +10,12 @@ const {
     getMostPopularMovies,
     getMostUpcomingMovies,
     searchMovie,
-    // getImages
- } = require('./movie.controller')
+    getActorDetail
+} = require('./movie.controller')
 const router = express.Router()
 
 router.get('/getMovie/:id', log, getCurrMovieBId)
-// router.get('/getMovieImages/:id', log, getImages)
+router.get('/getActor/:actorId', log, getActorDetail)
 router.get('/getPopularMovies', log, getMostPopularMovies)
 router.get('/getUpcomingMovies', log, getMostUpcomingMovies)
 router.get('/searchMovie/:searchedMovie', log, searchMovie)

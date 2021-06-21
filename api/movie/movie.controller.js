@@ -99,17 +99,17 @@ async function searchMovie(req, res) {
             res.status(500).send({ err: 'Failed to get movie' })
       }
 }
+async function getActorDetail(req, res) {
+      try {
+            const { actorId } = req.params
+            actor = await movieService.tmdb_getActorDetail(actorId)
+            res.json(actor)
+      } catch (err) {
+            logger.error('Cannot get actor', err)
+            res.status(500).send({ err: 'Failed to get actor' })
+      }
+}
 
-// async function getImages(req, res) {
-//       try {
-//             const { id } = req.params
-//             images = await movieService.tmdb_getImages(id)
-//             res.json(images)
-//       } catch (err) {
-//             logger.error('Cannot get images', err)
-//             res.status(500).send({ err: 'Failed to get images' })
-//       }
-// }
 module.exports = {
       getMovies,
       getMovieById,
@@ -120,6 +120,5 @@ module.exports = {
       getMostPopularMovies,
       getMostUpcomingMovies,
       searchMovie,
-      // getImages
-      // getSimilarMovies
+      getActorDetail
 }
